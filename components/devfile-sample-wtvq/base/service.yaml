@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-wtvq
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-wtvq
+    app.kubernetes.io/part-of: cin4s-839-0045-app
+  name: devfile-sample-wtvq
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-wtvq
+status:
+  loadBalancer: {}
